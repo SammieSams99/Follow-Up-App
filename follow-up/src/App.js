@@ -1,4 +1,4 @@
-console.log('cam was here')
+console.log('cam was here');
 
 import React from 'react';
 import logo from './logo.svg';
