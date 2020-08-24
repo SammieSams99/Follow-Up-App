@@ -1,12 +1,15 @@
 import React from 'react';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>App</h1>
-    </div>
-  );
+function Hello(props) {
+    return (
+      <div>
+        <h1>Hello {props.name}</h1>
+        <p> You are {props.age} years old</p>
+      </div>
+    );
 }
 
-export default App;
+
+
+
+export default Hello;
