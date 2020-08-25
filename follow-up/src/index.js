@@ -1,27 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Form from './components/Form'
+// import Form from './components/Form'
 import './App.css'
+import App from './App'
 
-const form = {
-  companyName: "Sony",
-  jobTitle: "Software Engineer",
-  location: "New York",
-  jobType: "Full Time",
-  appliedThrough: "Indeed",
-  remindDate:"September 10, 2020"
-}
+// const form = {
+//   companyName: "Sony",
+//   jobTitle: "Software Engineer",
+//   location: "New York",
+//   jobType: "Full Time",
+//   appliedThrough: "Indeed",
+//   remindDate:"September 10, 2020"
+// }
 
 
 
-ReactDOM.render(
-  <Form 
-    companyName= {form.companyName}
-    jobTitle= {form.jobTitle}
-    location= {form.location}
-    jobType= {form.jobType}
-    appliedThrough= {form.appliedThrough}
-    remindDate= {form.remindDate}
-  />,
-  document.getElementById('root')
-);
+
+//   <Form 
+//     companyName= {form.companyName}
+//     jobTitle= {form.jobTitle}
+//     location= {form.location}
+//     jobType= {form.jobType}
+//     appliedThrough= {form.appliedThrough}
+//     remindDate= {form.remindDate}
+//   />,
+
+ReactDOM.render(<App />, document.getElementById('root'));
