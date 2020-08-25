@@ -5,7 +5,6 @@ class Form extends React.Component {
       super(props);
       this.state = {
         username: '',
-        age: null,
       };
     }
     myChangeHandler = (event) => {
@@ -42,10 +41,10 @@ class Form extends React.Component {
           onChange={this.myChangeHandler}
           />
           <p>Job Type:</p>
-        <select>
+        <select name="Jobtype">
           <option value="full time">Full Time</option>
-          <option value="full time">Part Time</option>
-          <option value="full time">Contract</option>
+          <option value="part time">Part Time</option>
+          <option value="contract">Contract</option>
           onChange={this.myChangeHandler}
         </select>
         <p>Applied Through:</p>
