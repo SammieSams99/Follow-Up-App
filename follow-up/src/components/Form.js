@@ -5,6 +5,8 @@ class Form extends React.Component {
       super(props);
       this.state = {
         username: '',
+        jobType: "full time",
+        appliedThrough: "linkedin"
       };
     }
     myChangeHandler = (event) => {
@@ -12,9 +14,24 @@ class Form extends React.Component {
       let val = event.target.value;
       this.setState({[nam]: val});
     }
+    myJobTypeHandler= (event) => {
+      // let jobType = event.target.value
+      this.setState({
+      jobType: event.target.value
+      }
+      )
+    }
+
+    appliedThroughHandler= (event) => {
+      this.setState({
+        appliedThrough: event.target.value
+      }
+      )
+
+    }
     render() {
       return (
-        <form>
+        <form className='userform'>
         <p>Company Name:</p>
         <input
           type='text'
@@ -41,14 +58,13 @@ class Form extends React.Component {
           onChange={this.myChangeHandler}
           />
           <p>Job Type:</p>
-        <select name="Jobtype">
+        <select onChange={this.myJobTypeHandler}>
           <option value="full time">Full Time</option>
           <option value="part time">Part Time</option>
           <option value="contract">Contract</option>
-          onChange={this.myChangeHandler}
         </select>
         <p>Applied Through:</p>
-        <select>
+        <select onChange={this.appliedThroughHandler}>
           <option value="linkedin">LinkedIn</option>
           <option value="Career Builder">Career Builder</option>
           <option value="Glass Door">Glass Door</option>
@@ -56,7 +72,6 @@ class Form extends React.Component {
           <option value="Zip Recruiter">Zip Recruiter</option>
           <option value="Robert Half">Robert Half</option>
           <option value="Google">Google</option>
-          onChange={this.myChangeHandler}
         </select>
           <p>Follow Up Date:</p>
         <input
