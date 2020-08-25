@@ -27,7 +27,7 @@ import axios from "axios";
 
     axios
       .post(
-        "http://localhost:3001/registration",
+        "http://localhost:3000/registration",
         {
           user: {
             email: email,

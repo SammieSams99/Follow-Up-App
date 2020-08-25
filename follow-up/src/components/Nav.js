@@ -4,13 +4,13 @@ import {Link} from "react-router-dom";
 function Nav() {
     return (
         <nav>
-            <h3>logo</h3>
+            <h3>Jobs Applied For: 10</h3>
             <ul className="nav-links">
-                <Link>
-                   <li>Jobs Applied for</li>
-                </Link>
+                <div class="logo-area">
+                   <a href=""><img src="logo.png"/></a>
+                </div>
                 <Link to="/home">
-                <li> Logout</li>
+                <h3>Logout</h3>
                 </Link>
             </ul>
         </nav>
