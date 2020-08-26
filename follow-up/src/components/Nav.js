@@ -11,6 +11,9 @@ function Nav() {
                 </div>
                 <Link to="/home">
                 <h3>Logout</h3>
+                </Link> 
+                <Link to="/form">
+                <h3>Login</h3>
                 </Link>
             </ul>
         </nav>
