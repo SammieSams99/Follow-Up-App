@@ -6,6 +6,7 @@ class Registration extends Component {
     super(props);
 
     this.state = {
+      name: "",
       email: "",
       password: "",
       password_confirmation: "",
@@ -24,13 +25,15 @@ class Registration extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { email, password, password_confirmation } = this.state;
+    const { name,email, password, password_confirmation } = this.state;
+    console.log("submit")
 
     axios
       .post(
         "http://localhost:3001/api/v1/auth/register",
         {
           user: {
+            name: name,
             email: email,
             password: password,
             password_confirmation: password_confirmation
@@ -39,11 +42,14 @@ class Registration extends Component {
         { withCredentials: true }
       )
       .then(response => {
-        if (response.data.status === "created") {
+
           // this.props.handleSuccessfulAuth(response.data);
           console.log("created")
+          console.log(response.data)
+          localStorage.setItem("id", response.data._id)
+          localStorage.setItem("name", response.data.name)
         }
-      })
+      )
       .catch(error => {
         console.log("registration error", error);
       });
@@ -54,6 +60,15 @@ class Registration extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+        <input
+            type="name"
+            name="name"
+            placeholder="Name"
+            value={this.state.name}
+            onChange={this.handleChange}
+            required
+          />
+
           <input
             type="email"
             name="email"
