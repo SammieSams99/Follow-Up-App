@@ -19,7 +19,7 @@ export default class Home extends Component {
   // move to App.js
   handleLogoutClick() {
     axios
-      .delete("http://localhost:3000/logout", { withCredentials: true })
+      .delete("http://localhost:3001/api/v1/auth/logout", { withCredentials: true })
       .then(response => {
         this.props.handleLogout();
       })
@@ -32,9 +32,27 @@ export default class Home extends Component {
     return (
       <div>
         <button onClick={() => this.handleLogoutClick()}>Logout</button>
+        <button onClick={() => this.handleSuccessfulAuth()}>Login</button>
         <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
         <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
+        
+        <nav>
+        <button onClick={() => this.handleLogoutClick()}>Logout</button>
+        <button onClick={() => this.handleSuccessfulAuth()}>Login</button>
+                <ul className="navbar-nav ml-auto">
+                    <li className="nav-item" class="nav-link smoothScroll">Who we are </li>
+                    <li className="nav-item" class="nav-link smoothScroll">Testimonials</li>
+                    <li className="nav-item" class="nav-link"> Register</li>
+                    <li className="nav-item" class="nav-link contact">Log In</li>
+                </ul>
+        </nav>
+        
+
+
+        
       </div>
+
+     
     );
   }
 }

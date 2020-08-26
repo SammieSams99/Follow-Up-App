@@ -38,10 +38,27 @@ nav{
   align-items: center;
 }
 
-.form {
-  left: 50%;
-  top: 50%;
-  margin-left: -25%;
-  position: absolute;
-  margin-top: -25%;
+.userform {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
+  
+.userform label {
+  margin: 5px 10px 5px 0;
+}
+
+.userform input {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+  .userform button:hover {
+  background-color: royalblue;
+}
+
+
+

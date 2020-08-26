@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 // import Form from './components/Form'
 import './App.css'
 import App from './App'
+import 'bootstrap/dist/css/bootstrap.css'
 
 // const form = {
 //   companyName: "Sony",
