@@ -2,7 +2,8 @@
 
 ### Mission Statement
 
-Applying for jobs can be tedious but with Follow Up, it doesn’t have to! With resourcefulness and determination, we can work together to give your application more consideration than the competition and get you into that interview with the jobs you want. Keeping up with multiple job applications can be a strenuous task. Let us join you in your job search by offering organization and peace of mind. We remind you to follow up with employers on job opportunities. Why does this work? This is something that very few potential candidates do. While the competition waits by the phone, Follow Up reminds you to pick it up and take initiative. Follow Up is your guide to a successful job search experience, everytime. Follow Up, changing lives one job at a time.
+Applying for jobs can be tedious but with Follow Up, it doesn’t have to! With resourcefulness and determination, we can work together to give your application more consideration than the competition and get you into that interview with the jobs you want. Keeping up with multiple job applications can be a strenuous task. Let us join you in your job search by offering organization and peace of mind. We remind you to follow up with employers on job opportunities. Why does this work? This is something that very few potential candidates do. While the competition waits by the phone, Follow Up reminds you to pick it up and take initiative. Follow Up is your guide to a successful job search experience, everytime. Don’t let up, Follow Up!
+
 
 ______________________________________________________________________________________________________________
 
