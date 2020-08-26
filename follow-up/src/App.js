@@ -1,8 +1,10 @@
+// should axios be imported into this file?
 import React, { Component} from 'react';
 import './App.css';
 import {addApplication, deleteApplication, deleteAllApplications} from './userActions/index';
 import moment from 'moment';
 import Routes from './config/routes'
+import axios from "axios"
 
 
 
@@ -18,17 +20,30 @@ class App extends Component {
     };
   }
 
-  addApplication() {
-    this.props.addApplication(this.state.name, this.state.title, this.state.location, this.state.appDate, this.state.followUpDate);
-    this.setState({name: '', title: '', location: '', appDate: '', followUpDate: ''})
+  handleLogoutClick() {
+    axios
+      .delete("http://localhost:3001/api/v1/auth/logout", { withCredentials: true })
+      .then(response => {
+      // destroy the user id in local storage 
+      })
+      
+      .catch(error => {
+        console.log("logout error", error);
+      });
   }
 
-  deleteApplication(id){
-    this.props.deleteApplication(id);
-  }
-  deleteAllApplications(){
-    this.props.deleteAllApplications();
-  }
+// move to application container
+  // addApplication() {
+  //   this.props.addApplication(this.state.name, this.state.title, this.state.location, this.state.appDate, this.state.followUpDate);
+  //   this.setState({name: '', title: '', location: '', appDate: '', followUpDate: ''})
+  // }
+
+  // deleteApplication(id){
+  //   this.props.deleteApplication(id);
+  // }
+  // deleteAllApplications(){
+  //   this.props.deleteAllApplications();
+  // }
 
 //   render() {
 //     const { applications } = this.props;
@@ -55,7 +70,9 @@ class App extends Component {
 //   }
       render() {
         return (
-          <Routes/>
+          <Routes handleLogout={this.handleLogoutClick}/>
+          // Pass user = {props.user} to nav or header or wherever nav lives
+          
         )
       }
 }

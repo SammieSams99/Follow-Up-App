@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
 
- class Registration extends Component {
-   constructor(props) {
+class Registration extends Component {
+  constructor(props) {
     super(props);
 
     this.state = {
@@ -23,11 +23,12 @@ import axios from "axios";
   }
 
   handleSubmit(event) {
+    event.preventDefault();
     const { email, password, password_confirmation } = this.state;
 
     axios
       .post(
-        "http://localhost:3000/registration",
+        "http://localhost:3001/api/v1/auth/register",
         {
           user: {
             email: email,
@@ -39,13 +40,14 @@ import axios from "axios";
       )
       .then(response => {
         if (response.data.status === "created") {
-          this.props.handleSuccessfulAuth(response.data);
+          // this.props.handleSuccessfulAuth(response.data);
+          console.log("created")
         }
       })
       .catch(error => {
         console.log("registration error", error);
       });
-    event.preventDefault();
+    
   }
 
   render() {

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class Login extends Component {
+  // are lines 6 & 7 needed or can we refactor when complete?
   constructor(props) {
     super(props);
 
@@ -22,11 +23,12 @@ class Login extends Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
     const { email, password } = this.state;
 
     axios
       .post(
-        "http://localhost:3000/sessions",
+        "http://localhost:3001/api/v1/auth/login",
         {
           user: {
             email: email,
@@ -37,13 +39,14 @@ class Login extends Component {
       )
       .then(response => {
         if (response.data.logged_in) {
-          this.props.handleSuccessfulAuth(response.data);
+          // this.props.handleSuccessfulAuth(response.data);
+          console.log("sucessful login")
         }
       })
       .catch(error => {
         console.log("login error", error);
       });
-    event.preventDefault();
+   
   }
 
   render() {
