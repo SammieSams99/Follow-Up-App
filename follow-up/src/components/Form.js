@@ -62,7 +62,7 @@ class Form extends React.Component {
           <option value="full time">Full Time</option>
           <option value="part time">Part Time</option>
           <option value="contract">Contract</option>
-        </select>
+        </select> 
         <p>Applied Through:</p>
         <select onChange={this.appliedThroughHandler}>
           <option value="linkedin">LinkedIn</option>
