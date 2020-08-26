@@ -12,7 +12,7 @@ ________________________________________________________________________________
 
 ## Technologies Used
 
-The technologies used to create this project were Visual Studio Code, MongoDB/Mongoose, Express, REACT and Node.js.
+The technologies used to create this project were Visual Studio Code, MongoDB/Mongoose, Express, REACT and Node.js. We also used a Twilio API for contact with the user.
 
 ### List of all tech, libraries, API's, etc
 
