@@ -8,7 +8,6 @@ function Nav(props) {
     
     return (
         <nav>
-            <h3>Jobs Applied For: 10</h3>
             <ul className="nav-links">
                 <div class="logo-area">
                     <a href=""><img src="logo.png" /></a>
@@ -20,7 +19,7 @@ function Nav(props) {
                 <>
                     <li><Link to={'/login'}> <h3>Login</h3></Link></li>
 
-                    <li><Link to={'/registration'}> <h3>Register</h3></Link></li>
+                    <li> <Link to={'/registration'}> <h3>Register</h3></Link></li>
                     {/* change to be some sort of link or clickable button with onClick = {handleLogout} */}
                     <li><Link to={'/'} onClick={props.handleLogout}> <h3>Logout</h3></Link></li>
                 </>
