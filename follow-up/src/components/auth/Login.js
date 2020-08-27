@@ -29,17 +29,16 @@ class Login extends Component {
       .post(
         "http://localhost:3001/api/v1/auth/login",
         {
-          user: {
-            email: email,
-            password: password
-          }
+          email: email,
+          password: password
         },
         { withCredentials: true }
       )
       .then(response => {
-        console.log("sucessful login")
+        console.log(response)
         localStorage.setItem("id", response.data._id)
         localStorage.setItem("name", response.data.name)
+        // this.props.history.push("/form")
 
       })
       .catch(error => {
@@ -53,17 +52,18 @@ class Login extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
           <h1>Welcome back</h1>
-          <p>Email</p>
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            value={this.state.email}
-            onChange={this.handleChange}
-            required
-          />
-
-          <p>Username</p>
+          <div>
+            <p>Email</p>
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              value={this.state.email}
+              onChange={this.handleChange}
+              required
+            />
+          </div>
+          <p>Password</p>
           <input
             type="password"
             name="password"

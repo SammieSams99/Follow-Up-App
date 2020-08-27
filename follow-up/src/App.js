@@ -7,7 +7,7 @@ import Routes from './config/routes'
 import axios from "axios"
 
 
-
+// change to arrow function instead?
 class App extends Component {
   constructor(props){
     super(props);

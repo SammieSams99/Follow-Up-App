@@ -35,8 +35,7 @@ class Registration extends Component {
           user: {
             name: name,
             email: email,
-            password: password,
-            password_confirmation: password_confirmation
+            password: password
           }
         },
         { withCredentials: true }
@@ -46,8 +45,8 @@ class Registration extends Component {
           // this.props.handleSuccessfulAuth(response.data);
           console.log("created")
           console.log(response.data)
-          localStorage.setItem("id", response.data._id)
-          localStorage.setItem("name", response.data.name)
+
+          this.props.history.push("/login")
         }
       )
       .catch(error => {
@@ -61,6 +60,7 @@ class Registration extends Component {
       <div>
         <form onSubmit={this.handleSubmit}>
         <p>Please fill out the form below:</p>
+        <p>Name</p>
         <input
             type="name"
             name="name"
