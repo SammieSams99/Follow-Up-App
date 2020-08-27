@@ -38,7 +38,7 @@ class Login extends Component {
         console.log(response)
         localStorage.setItem("id", response.data._id)
         localStorage.setItem("name", response.data.name)
-        // this.props.history.push("/form")
+        this.props.history.push("/form")
 
       })
       .catch(error => {
