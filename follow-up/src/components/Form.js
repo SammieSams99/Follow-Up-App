@@ -31,6 +31,7 @@ class Form extends React.Component {
     }
     render() {
       return (
+        <> 
         <form className='userform'>
         <p>Company Name:</p>
         <input
@@ -82,6 +83,7 @@ class Form extends React.Component {
         />
         <input type="submit" value="Follow Up"/>
         </form>
+        </>
       );
     }
   }
