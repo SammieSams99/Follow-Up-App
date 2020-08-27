@@ -32,11 +32,9 @@ class Registration extends Component {
       .post(
         "http://localhost:3001/api/v1/auth/register",
         {
-          user: {
-            name: name,
-            email: email,
-            password: password
-          }
+          name: name,
+          email: email,
+          password: password,
         },
         { withCredentials: true }
       )
