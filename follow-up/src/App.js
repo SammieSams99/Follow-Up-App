@@ -24,8 +24,10 @@ class App extends Component {
     axios
       .delete("http://localhost:3001/api/v1/auth/logout", { withCredentials: true })
       .then(response => {
+        localStorage.removeItem("id")
+          localStorage.removeItem("name")
+        })
       // destroy the user id in local storage 
-      })
       
       .catch(error => {
         console.log("logout error", error);

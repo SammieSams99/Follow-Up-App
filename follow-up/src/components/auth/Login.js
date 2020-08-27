@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 
 class Login extends Component {
-  // are lines 6 & 7 needed or can we refactor when complete?
   constructor(props) {
     super(props);
 
@@ -38,15 +37,15 @@ class Login extends Component {
         { withCredentials: true }
       )
       .then(response => {
-        if (response.data.logged_in) {
-          // this.props.handleSuccessfulAuth(response.data);
-          console.log("sucessful login")
-        }
+        console.log("sucessful login")
+        localStorage.setItem("id", response.data._id)
+        localStorage.setItem("name", response.data.name)
+
       })
       .catch(error => {
         console.log("login error", error);
       });
-   
+
   }
 
   render() {
