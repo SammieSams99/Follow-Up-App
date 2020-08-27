@@ -30,7 +30,6 @@ class Login extends Component {
       .post(
         "http://localhost:3001/api/v1/auth/login",
         {
-         
             email: email,
             password: password
         },
