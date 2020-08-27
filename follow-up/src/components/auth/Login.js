@@ -30,6 +30,10 @@ class Login extends Component {
       .post(
         "http://localhost:3001/api/v1/auth/login",
         {
+<<<<<<< HEAD
+=======
+         
+>>>>>>> submaster
             email: email,
             password: password
         },
@@ -40,6 +44,7 @@ class Login extends Component {
           // this.props.handleSuccessfulAuth(response.data);
           console.log("sucessful login")
         }
+        this.props.history.push("/form")
       })
       .catch(error => {
         console.log("login error", error);
@@ -62,7 +67,7 @@ class Login extends Component {
             required
           />
 
-          <p>Username</p>
+          <p>Password</p>
           <input
             type="password"
             name="password"
