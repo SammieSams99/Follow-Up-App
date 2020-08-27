@@ -53,6 +53,8 @@ class Login extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+          <h1>Welcome back</h1>
+          <p>Email</p>
           <input
             type="email"
             name="email"
@@ -62,6 +64,7 @@ class Login extends Component {
             required
           />
 
+          <p>Username</p>
           <input
             type="password"
             name="password"

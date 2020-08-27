@@ -60,6 +60,7 @@ class Registration extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
+        <p>Please fill out the form below:</p>
         <input
             type="name"
             name="name"
@@ -68,7 +69,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-
+          <p>Email</p>
           <input
             type="email"
             name="email"
@@ -77,7 +78,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-
+          <p>Password</p>
           <input
             type="password"
             name="password"
@@ -86,7 +87,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-
+          <p> Confirm Password</p>
           <input
             type="password"
             name="password_confirmation"
