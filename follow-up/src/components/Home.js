@@ -1,58 +1,15 @@
 import React, { Component } from "react";
-import axios from "axios";
-import Registration from "./auth/Registration";
-import Login from "./auth/Login";
 
-export default class Home extends Component {
-  constructor(props) {
-    super(props);
 
-    this.handleSuccessfulAuth = this.handleSuccessfulAuth.bind(this);
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
-  }
+ const Home = () => {
 
-  handleSuccessfulAuth(data) {
-    this.props.handleLogin(data);
-    this.props.history.push("/dashboard");
-  }
-
-  // move to App.js
-  handleLogoutClick() {
-    axios
-      .delete("http://localhost:3001/api/v1/auth/logout", { withCredentials: true })
-      .then(response => {
-        this.props.handleLogout();
-      })
-      .catch(error => {
-        console.log("logout error", error);
-      });
-  }
-
-  render() {
     return (
       <div>
-        <button onClick={() => this.handleLogoutClick()}>Logout</button>
-        <button onClick={() => this.handleSuccessfulAuth()}>Login</button>
-        <Registration handleSuccessfulAuth={this.handleSuccessfulAuth} />
-        <Login handleSuccessfulAuth={this.handleSuccessfulAuth} />
-        
-        <nav>
-        <button onClick={() => this.handleLogoutClick()}>Logout</button>
-        <button onClick={() => this.handleSuccessfulAuth()}>Login</button>
-                <ul className="navbar-nav ml-auto">
-                    <li className="nav-item" class="nav-link smoothScroll">Who we are </li>
-                    <li className="nav-item" class="nav-link smoothScroll">Testimonials</li>
-                    <li className="nav-item" class="nav-link"> Register</li>
-                    <li className="nav-item" class="nav-link contact">Log In</li>
-                </ul>
-        </nav>
-        
-
-
-        
+        <h1>
+          Welcome to Follow Up
+        </h1>
       </div>
-
-     
     );
-  }
 }
+
+export default Home;
