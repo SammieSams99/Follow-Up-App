@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 class Form extends React.Component {
     constructor(props) {
@@ -27,12 +28,27 @@ class Form extends React.Component {
         appliedThrough: event.target.value
       }
       )
+    }
 
+    onSubmit = (event) => {
+      event.preventDefault()
+      console.log({...this.state}) 
+      axios.post("http://localhost:3001/api/v1/app", {
+        ...this.state
+      })
+      .then(function(res){
+        console.log(res)
+      })
+      .catch(function(error){
+        console.log(error)
+      })
     }
     render() {
+    const name = localStorage.getItem("name")
       return (
         <> 
-        <form className='userform'>
+        {name ? <h1>Welcome, {name}</h1> : "" }
+        <form onSubmit = {this.onSubmit} className='userform'>
         <p>Company Name:</p>
         <input
           type='text'

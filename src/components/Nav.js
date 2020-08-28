@@ -17,7 +17,7 @@ function Nav(props) {
 
                 {/* ternery statement, links that we should see when logged in : links that should not   */}
                 {userId ?
-
+// To add to the nav something that displays "Welcome back <Users Name>"
                     <>
                         {/* change to be some sort of link or clickable button with onClick = {handleLogout} */}
                         <li><Link to={'/'} onClick={props.handleLogout}> <h3>Logout</h3></Link></li>
