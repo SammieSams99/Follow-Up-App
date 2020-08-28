@@ -1,64 +1,38 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.App {
+  text-align: center;
 }
 
-body {
-  font-family: Arial, Helvetics, sans-serif;
-  line-height: 1.4;
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
 }
 
-a {
-  color: white;
-  text-decoration: none;
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
 }
 
-nav{
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  min-height: 10vh;
-  background: blue;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.nav-links{
-  width: 5%;
-  display: top right;
-  justify-content: space-around;
-  align-items: center;
-  list-style: none;
+.App-link {
+  color: #61dafb;
 }
 
-.logo-area img{
-  margin-top: 3px;
-  height : 20%;
-  width : 30%;
-  align-items: right;
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
-
-.userform {
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-}
-  
-.userform label {
-  margin: 5px 10px 5px 0;
-}
-
-.userform input {
-  vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
-}
-
-  .userform button:hover {
-  background-color: royalblue;
-}
-
-
-
