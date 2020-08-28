@@ -5,6 +5,7 @@ import Form from '../components/Form';
 import Login from '../components/auth/Login';
 import Registration from '../components/auth/Registration';
 import { BrowserRouter as Router, Switch, Route} from'react-router-dom';
+import Userapps from '../components/Userapps';
 
 
 function Routes(props) {
@@ -16,6 +17,7 @@ function Routes(props) {
           {/* Do we need a route for the nav? */}
           <Route path="/" exact component={Home}/>
           <Route path="/form" component={Form}/>
+          <Route path="/userapps" component={Userapps}/>
           <Route path="/login" component={Login}/>
           <Route path="/registration" component={Registration}/>
         </Switch>

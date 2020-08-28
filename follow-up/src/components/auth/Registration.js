@@ -27,6 +27,7 @@ class Registration extends Component {
     event.preventDefault();
     const { name,email, password, password_confirmation } = this.state;
     console.log("submit")
+    alert("Thank you! You are now a Follow Up member, please login.")
 
     axios
       .post(
