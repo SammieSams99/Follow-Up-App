@@ -22,6 +22,8 @@ function Nav(props) {
                     <li> <Link to={'/registration'}> <h3>Register</h3></Link></li>
                     {/* change to be some sort of link or clickable button with onClick = {handleLogout} */}
                     <li><Link to={'/'} onClick={props.handleLogout}> <h3>Logout</h3></Link></li>
+                    {localStorage.getItem('id')? <li><Link to={'/userapps'} > <h3>My Apps</h3></Link></li>:''}
+                    {localStorage.getItem('id')? <li><Link to={'/form'} > <h3>New Form</h3></Link></li>:''}
                 </>
             </ul>
         </nav >
