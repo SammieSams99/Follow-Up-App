@@ -1,15 +1,15 @@
 import React, { Component } from "react";
 
 
- const Home = () => {
+ const Userapps = () => {
 
     return (
       <div>
         <h1>
-          WELCOME TO FOLLOW UP
+          Here are your apps
         </h1>
       </div>
     );
 }
 
-export default Home;
+export default Userapps;
