@@ -9,7 +9,7 @@ function Nav(props) {
     return (
         <nav>
             <ul className="nav-links">
-                <div class="logo-area">
+                <div className="logo-area">
                     <a href=""><img src="logo.png" /></a>
                     {/* could we say <a href="/home"><img src="logo.png"/></a>  ? */}
                 </div>
