@@ -50,7 +50,7 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
+      <div className="userLogin">
         <form onSubmit={this.handleSubmit}>
           <h1>Welcome back</h1>
           <p>Email</p>

@@ -48,7 +48,7 @@ class Form extends React.Component {
     render() {
       return (
         <> 
-        <form onSubmit = {this.onSubmit} className='userform'>
+        <form onSubmit = {this.onSubmit} className="userform">
         <p>Company Name:</p>
         <input
           type='text'
@@ -97,7 +97,7 @@ class Form extends React.Component {
           name= "followupdate"
           onChange={this.myChangeHandler}
         />
-        <input type="submit" value="Follow Up"/>
+        <input type="submit" value="Follow Up" style={{borderColor: "blue"}}/>
         </form>
         </>
       );
