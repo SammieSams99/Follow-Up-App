@@ -25,7 +25,7 @@ class Registration extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { name,email, password, password_confirmation } = this.state;
+    const { name,email, password} = this.state;
     console.log("submit")
     alert("Thank you! You are now a Follow Up member, please login.")
 
@@ -56,8 +56,8 @@ class Registration extends Component {
 
   render() {
     return (
-      <div className="registrationForm">
-        <form onSubmit={this.handleSubmit}>
+      <div className= 'reg'>
+        <form onSubmit={this.handleSubmit} className="regform">
         <p>Please fill out the form below:</p>
         <input
             type="name"
