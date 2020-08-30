@@ -9,15 +9,15 @@ function Nav(props) {
     return (
         <nav className="Navbar">
             <div className="Navlogo">
-                <Link to='/'><h3>Follow Up</h3></Link>
+                <Link to='/'><h3 style={{color: "antiquewhite"}}>Follow Up</h3></Link>
             </div>
                 <ul className="listbox">
-                    <li className="listitem"><Link to={'/login'}> <h3>Login</h3></Link></li>
-                    <li className="listitem"><Link to={'/registration'}> <h3>Register</h3></Link></li>
+                    <li className="loginItem"><Link to={'/login'}> <h4 style={{color: "antiquewhite"}}>Login</h4></Link></li>
+                    <li className="regItem"><Link to={'/registration'}> <h4 style={{color: "antiquewhite"}}>Register</h4></Link></li>
                     {/* change to be some sort of link or clickable button with onClick = {handleLogout} */}
-                    <li className="listitem"><Link to={'/'} onClick={props.handleLogout}> <h3>Logout</h3></Link></li>
-                    {localStorage.getItem('id')? <li className="listitem"><Link to={'/userapps'} ><h3>My Apps</h3></Link></li>:''}
-                    {localStorage.getItem('id')? <li className="listitem"><Link to={'/form'} > <h3>New Form</h3></Link></li>:''}
+                    <li className="logoutItem"><Link to={'/'} onClick={props.handleLogout}> <h4 style={{color: "antiquewhite"}}>Logout</h4></Link></li>
+                    {localStorage.getItem('id')? <li className="listitem"><Link to={'/userapps'} ><h5 style={{color: "antiquewhite"}}>My Apps</h5></Link></li>:''}
+                    {localStorage.getItem('id')? <li className="listitem"><Link to={'/form'} > <h5 style={{color: "antiquewhite"}}>New Form</h5></Link></li>:''}
                 </ul>
         </nav >
     );

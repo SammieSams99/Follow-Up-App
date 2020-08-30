@@ -2,12 +2,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetics, sans-serif;
   line-height: 1.4;
   padding: 5;
+  background-color: grey;
 }
 
 a {
@@ -24,6 +27,7 @@ a {
   padding: 0;
   z-index: 10;
   background: linear-gradient(176.69deg, #0099FF 0%, #0066FF 120.34%);
+  opacity: 1;
   transition: background-color 0.2s ease;
 }
 
@@ -56,44 +60,79 @@ a {
   z-index: 15;
 }
 
-.listitem{
+.loginItem{
   border-style: none;
   background-color: transparent;
-  text-align: left;
+  position: relative;
+  right: 900px;
   height: 20px;
   outline: 0;
   font-size: 18px;
+  color: grey;
+  z-index: 15;
 }
 
-.userform{
- background-color: transparent;
- margin-bottom: 50px;
+.regItem{
+  border-style: none;
+  background-color: transparent;
+  position: relative;
+  right: 850px;
+  height: 20px;
+  outline: 0;
+  font-size: 18px;
+  color: bisque;
 }
-  
-.userform label{
+
+.registrationForm{
+ /* background-color: transparent;
+ margin-bottom: 50px;
+ z-index: 100;
+ position: relative;
+ left: 450px;
+ top: 200px; */
+  width: 300px;
+  height: 550px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #0066FF,
+    inset -20px 0 80px #0099FF,
+    inset 20px 0 300px #0066FF,
+    inset -20px 0 300px #0099FF,
+    0 0 50px #fff,
+    -10px 0 80px #0066FF,
+    10px 0 80px #0099FF;
+  vertical-align: middle;
   margin: auto;
-  width: 70;
-  max-width: 775px;
   padding: 8px 35px 30px;
-  box-sizing: border-box;
-  border: none;
   border-radius: 10px;
   position: relative;
-  animation: PhaseIn 0.5s ease forwards;
-  transition: box-shadow 0.2s ease;
+  left: -5px;
+  top: 200px;
 }
 
-.userform input {
+.userform {
+  width: 300px;
+  height: 550px;
+  border-radius: 50%;
+  box-shadow:
+    inset 0 0 50px #fff,
+    inset 20px 0 80px #0066FF,
+    inset -20px 0 80px #0099FF,
+    inset 20px 0 300px #0066FF,
+    inset -20px 0 300px #0099FF,
+    0 0 50px #fff,
+    -10px 0 80px #0066FF,
+    10px 0 80px #0099FF;
   vertical-align: middle;
-  margin: 5px 10px 5px 0;
-  padding: 10px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  margin: auto;
+  padding: 8px 35px 30px;
+  border-radius: 10px;
+  position: relative;
+  left: -5px;
+  top: 200px;
 }
 
-  .userform button:hover {
+.userform button:hover {
   background-color: royalblue;
 }
-
-
-
