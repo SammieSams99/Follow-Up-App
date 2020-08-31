@@ -5,7 +5,7 @@ class Form extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        username: '',
+        user: localStorage.getItem("id"),
         jobType: "full time",
         appliedThrough: "linkedin"
       };
@@ -33,7 +33,7 @@ class Form extends React.Component {
     onSubmit = (event) => {
       event.preventDefault()
       console.log({...this.state}) 
-      axios.post("http://localhost:3001/api/v1/form", {
+      axios.post("http://localhost:3001/api/v1/forms", {
         ...this.state
       }, {
         withCredentials: true

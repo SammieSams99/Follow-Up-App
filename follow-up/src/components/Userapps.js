@@ -13,10 +13,12 @@ class Userapps extends Component {
     withCredentials: true
   })
   .then(res => {
+    console.log(res)
+    console.log(res.data.forms)
     this.setState({
-      data: {
-        form: res.data.forms,
-      }
+      
+      form: res.data.forms,
+      
     })
   }
 
@@ -33,7 +35,7 @@ class Userapps extends Component {
           Here are your apps
         </h1>
       </div>
-
+    {this.state.form && this.state.form.map((app) => <p> {app.name } </p>)}
       </>
     )
   }
