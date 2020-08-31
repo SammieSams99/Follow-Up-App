@@ -9,16 +9,15 @@ class Userapps extends Component {
     form: [] 
   }
   componentDidMount() {
-  axios.get("http://localhost:3001/api/v1/forms")
+  axios.get("http://localhost:3001/api/v1/forms",{
+    withCredentials: true
+  })
   .then(res => {
-    console.error();
     this.setState({
       data: {
-        form: this.state.form,
+        form: res.data.forms,
       }
     })
-  }, {
-    withCredentials: true
   }
 
   )}
@@ -29,7 +28,7 @@ class Userapps extends Component {
     return (
       <>
 
-      <div>
+      <div className= "apppage">
         <h1>
           Here are your apps
         </h1>
