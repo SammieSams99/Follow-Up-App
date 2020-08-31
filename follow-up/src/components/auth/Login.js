@@ -40,7 +40,7 @@ class Login extends Component {
           // this.props.handleSuccessfulAuth(response.data);
           console.log("sucessful login")
         }
-        this.props.history.push("/userapps")
+        this.props.history.push("/form")
       })
       .catch(error => {
         console.log("login error", error);
@@ -50,8 +50,8 @@ class Login extends Component {
 
   render() {
     return (
-      <div className= "log">
-        <form onSubmit={this.handleSubmit} className='loginform'>
+      <div className="userLogin">
+        <form onSubmit={this.handleSubmit}>
           <h1>Welcome back</h1>
           <p>Email</p>
           <input
@@ -61,8 +61,8 @@ class Login extends Component {
             value={this.state.email}
             onChange={this.handleChange}
             required
-          /> 
-        
+          />
+
           <p>Password</p>
           <input
             type="password"
@@ -73,7 +73,7 @@ class Login extends Component {
             required
           />
 
-          <button className="logbutton" type="submit">Login</button>
+          <button type="submit">Login</button>
         </form>
       </div>
     );
