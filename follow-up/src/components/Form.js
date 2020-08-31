@@ -32,7 +32,9 @@ class Form extends React.Component {
 
     onSubmit = (event) => {
       event.preventDefault()
-      console.log({...this.state}) 
+      console.log({...this.state})
+      console.log("follow up")
+      alert("Reminder created! Click My Apps to view your scheduled reminders") 
       axios.post("http://localhost:3001/api/v1/forms", {
         ...this.state
       }, {
@@ -99,7 +101,7 @@ class Form extends React.Component {
           name= "followupdate"
           onChange={this.myChangeHandler}
         />
-        <input type="submit" value="Follow Up" style={{borderColor: "blue"}}/>
+        <input style={{top: "30px"}} type="submit" value="Follow Up"/>
         </form>
         </>
       );
