@@ -206,7 +206,7 @@ a {
   top: 200px;
 }
 
-.userform button:hover {
+button:hover {
   background-color: royalblue;
 }
 
@@ -220,7 +220,7 @@ a {
 
 .appList {
   top: 90px;
-  left: 10px;
+  left: 450px;
   color: black;
   font-size: x-large;
   background: #888888;
