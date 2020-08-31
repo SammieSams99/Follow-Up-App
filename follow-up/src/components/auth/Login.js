@@ -53,7 +53,7 @@ class Login extends Component {
       <div className= "log">
         <form onSubmit={this.handleSubmit} className='loginform'>
           <h1>Welcome back</h1>
-          <p>Email</p>
+          <p>Email:</p>
           <input
             type="email"
             name="email"
@@ -63,7 +63,7 @@ class Login extends Component {
             required
           /> 
         
-          <p>Password</p>
+          <p>Password:</p>
           <input
             type="password"
             name="password"
