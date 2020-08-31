@@ -58,7 +58,7 @@ class Registration extends Component {
     return (
       <div className= 'reg'>
         <form onSubmit={this.handleSubmit} className="regform">
-        <p>Please fill out the form below:</p>
+        <h3>Please fill out the form below:</h3>
         <p>Name:</p>
         <input
             type="name"
