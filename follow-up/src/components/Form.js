@@ -46,8 +46,10 @@ class Form extends React.Component {
       })
     }
     render() {
+      const name = localStorage.getItem("name")
       return (
         <> 
+        {name ? <h1>Welcome, {name}</h1> : "" }
         <form onSubmit = {this.onSubmit} className="userform">
         <p>Company Name:</p>
         <input

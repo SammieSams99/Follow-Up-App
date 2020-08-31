@@ -61,8 +61,8 @@ class Login extends Component {
             value={this.state.email}
             onChange={this.handleChange}
             required
-          />
-
+          /> 
+        
           <p>Password</p>
           <input
             type="password"
