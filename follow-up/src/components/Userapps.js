@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
+// import moment from 'moment';
+
 
 // this is where axios.GET request will be made ADD CREDENTIALS
 
@@ -36,8 +38,8 @@ class Userapps extends Component {
         </h1>
       </div>
 
-    {this.state.form && this.state.form.map((app) => <button className="appList"> { app.name } { app.title } {app.followupdate} </button>)}
-    {/* {this.state.form && this.state.form.map((app) => <button className="appList"> { app.title } </button>)} */}
+    {this.state.form && this.state.form.map((app) => <button className="appList"> 
+    { app.name } { app.title } {app.followupdate} </button>)}
       </>
     )
   }
