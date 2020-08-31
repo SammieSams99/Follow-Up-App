@@ -31,16 +31,19 @@ class Userapps extends Component {
       <>
 
       <div className= "apppage">
-        <h1>
-          Here are your apps
+        <h1 className= "myAppsTitle">
+          Applications Scheduled to Follow Up:
         </h1>
       </div>
-    {this.state.form && this.state.form.map((app) => <p> {app.name } </p>)}
+
+    {this.state.form && this.state.form.map((app) => <button className="appList"> { app.name } { app.title } {app.followupdate} </button>)}
+    {/* {this.state.form && this.state.form.map((app) => <button className="appList"> { app.title } </button>)} */}
       </>
     )
   }
 }
 
+document.body.style = 'background-image: linear-gradient(to bottom right, white, black); background-attachment: fixed';
 
 
 
