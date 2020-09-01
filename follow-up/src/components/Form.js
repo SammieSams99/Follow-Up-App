@@ -53,38 +53,39 @@ class Form extends React.Component {
         <> 
         {name ? <h1>Welcome, {name}</h1> : "" }
         <form onSubmit = {this.onSubmit} className="userform">
-        <p>Company Name:</p>
+        <h1 style={{textShadow: "2px 2px antiquewhite"}}>Application Info</h1>
+        <p style={{top: "15px"}}>Company Name:</p>
         <input
           type='text'
           name='name'
           onChange={this.myChangeHandler}
         />
-        <p>Job Title:</p>
+        <p style={{top: "15px"}}>Job Title:</p>
         <input
           type='text'
           name='title'
           onChange={this.myChangeHandler}
         />
-        <p>Job Location:</p>
+        <p style={{top: "15px"}}>Job Location:</p>
         <input
           type='text'
           name='location'
           onChange={this.myChangeHandler}
           />
-          <p>Date Applied:</p>
+          <p style={{top: "15px"}}>Date Applied:</p>
         <input
           type='date'
           id= "appdate"
           name= "appdate"
           onChange={this.myChangeHandler}
           />
-          <p>Job Type:</p>
+          <p style={{top: "15px"}}>Job Type:</p>
         <select onChange={this.myJobTypeHandler}>
           <option value="full time">Full Time</option>
           <option value="part time">Part Time</option>
           <option value="contract">Contract</option>
         </select> 
-        <p>Applied Through:</p>
+        <p style={{top: "15px"}}>Applied Through:</p>
         <select onChange={this.appliedThroughHandler}>
           <option value="linkedin">LinkedIn</option>
           <option value="Career Builder">Career Builder</option>
@@ -94,14 +95,14 @@ class Form extends React.Component {
           <option value="Robert Half">Robert Half</option>
           <option value="Google">Google</option>
         </select>
-          <p>Follow Up Date:</p>
+          <p style={{top: "15px"}}> Follow Up Date:</p>
         <input
-          type="datetime-local"
+          type="date"
           id= "followupdate"
           name= "followupdate"
           onChange={this.myChangeHandler}
         />
-        <input style={{top: "30px"}} type="submit" value="Follow Up"/>
+        <input className="followupButton" type="submit" value="Follow Up"/>
         </form>
         </>
       );

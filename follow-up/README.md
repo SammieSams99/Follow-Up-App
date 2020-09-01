@@ -13,7 +13,7 @@ ________________________________________________________________________________
 
 ## Technologies Used
 
-The technologies used to create this project were Visual Studio Code, MongoDB/Mongoose, Express, REACT and Node.js. We also used a Twilio API for contact with the user.
+The technologies used to create this project were Visual Studio Code, MongoDB/Mongoose, Express, REACT and Node.js.
 
 ### List of all tech, libraries, API's, etc
 
@@ -25,7 +25,8 @@ Backend libraries: passport, postman, etc
 https://trello.com/b/W01OtG0g/follow-up
 
 ## Unsolved Problems
-
+We would have liked to add an API to be able to send the user an email using the email they applied with.
+Another thing that we would have done with more time is make the NavBar only show the appropriate links, for example if you are already logged in, login will not be an option for the user.
 
 ## Future Enhancements
 
@@ -33,4 +34,3 @@ https://trello.com/b/W01OtG0g/follow-up
 - Job transitions to red if not available
 - Create reminder to go to users contact information
 - Use bootstrap with REACT components
-- Create ‘x’ button for delete jobs
