@@ -53,7 +53,7 @@ class Login extends Component {
       <div className= "log">
         <form onSubmit={this.handleSubmit} className='loginform'>
           <h1 style={{textShadow: "2px 2px antiquewhite"}}>Welcome Back</h1>
-          <p>Email</p>
+          <p style={{top: "12px"}}>Email: </p>
           <input
             type="email"
             name="email"
@@ -63,8 +63,8 @@ class Login extends Component {
             required
           /> 
         
-          <p>Password</p>
-          <input
+          <p style={{top: "12px"}}>Password: </p>
+          <input style={{left: "20px"}}
             type="password"
             name="password"
             placeholder="Password"
@@ -73,7 +73,7 @@ class Login extends Component {
             required
           />
 
-          <button style={{left: "80px"}} className="logbutton" type="submit">Login</button>
+          <button style={{left: "25px"}} className="logbutton" type="submit">Login</button>
         </form>
       </div>
     );
