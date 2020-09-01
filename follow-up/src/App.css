@@ -68,7 +68,7 @@ a {
   padding: 8px 35px 30px;
   border-radius: 10px;
   position: relative;
-  top: -60px;
+  top: -90px;
   text-align: center;
   position: relative;
   box-shadow:
@@ -203,7 +203,7 @@ a {
   border-radius: 10px;
   position: relative;
   left: -5px;
-  top: 200px;
+  top: 100px;
 }
 
 button:hover {
