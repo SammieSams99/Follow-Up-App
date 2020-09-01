@@ -53,7 +53,7 @@ class Form extends React.Component {
         <> 
         {name ? <h1>Welcome, {name}</h1> : "" }
         <form onSubmit = {this.onSubmit} className="userform">
-        <h1 style={{textShadow: "2px 2px antiquewhite"}}>Add Application Info</h1>
+        <h1 style={{textShadow: "2px 2px antiquewhite"}}>Application Info</h1>
         <p>Company Name:</p>
         <input
           type='text'
