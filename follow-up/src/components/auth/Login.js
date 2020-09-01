@@ -30,7 +30,6 @@ class Login extends Component {
       .post(
         "http://localhost:3001/api/v1/auth/login",
         {
-         
             email: email,
             password: password
         },
@@ -41,7 +40,7 @@ class Login extends Component {
           // this.props.handleSuccessfulAuth(response.data);
           console.log("sucessful login")
         }
-        this.props.history.push("/form")
+        this.props.history.push("/userapps")
       })
       .catch(error => {
         console.log("login error", error);
@@ -51,9 +50,9 @@ class Login extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <h1>Welcome back</h1>
+      <div className= "log">
+        <form onSubmit={this.handleSubmit} className='loginform'>
+          <h1 style={{textShadow: "2px 2px antiquewhite"}}>Welcome Back</h1>
           <p>Email</p>
           <input
             type="email"
@@ -62,8 +61,8 @@ class Login extends Component {
             value={this.state.email}
             onChange={this.handleChange}
             required
-          />
-
+          /> 
+        
           <p>Password</p>
           <input
             type="password"
@@ -74,7 +73,7 @@ class Login extends Component {
             required
           />
 
-          <button type="submit">Login</button>
+          <button style={{left: "80px"}} className="logbutton" type="submit">Login</button>
         </form>
       </div>
     );

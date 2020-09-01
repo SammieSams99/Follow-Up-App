@@ -10,4 +10,6 @@ passport.use(new LocalStrategy({
 },
     function (email, password, cb) {
 
-    }
+
+}
+))
