@@ -52,7 +52,7 @@ class Login extends Component {
     return (
       <div className= "log">
         <form onSubmit={this.handleSubmit} className='loginform'>
-          <h1>Welcome back</h1>
+          <h1 style={{textShadow: "2px 2px antiquewhite"}}>Welcome Back</h1>
           <p>Email</p>
           <input
             type="email"
@@ -73,7 +73,7 @@ class Login extends Component {
             required
           />
 
-          <button className="logbutton" type="submit">Login</button>
+          <button style={{left: "80px"}} className="logbutton" type="submit">Login</button>
         </form>
       </div>
     );

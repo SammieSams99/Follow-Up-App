@@ -7,7 +7,7 @@ function Nav(props) {
     // handleLogout e.preventDefault then log person out and return a redirect back to Login page
     
     return (
-        <nav className="Navbar">
+        <nav className="Navbar" style={{textShadow: "2px 2px black"}}>
             <div className="Navlogo">
                 <Link to='/'><h3 style={{color: "antiquewhite"}}>Follow Up</h3></Link>
             </div>
