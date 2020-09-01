@@ -21,7 +21,7 @@ import React from "react";
           <p>Follow Up, reminding you to remind them.</p>
           <h1 style={{textShadow: "antiquewhite 2px 2px"}}>How do I use it?</h1>
           <p>Step 1: Click 'Form' and enter your job information</p>
-          <p>Step 2: Enter the date and time you want a reminder to follow up with this position</p>
+          <p>Step 2: Enter the date you want a reminder to follow up with your position</p>
           <p>Step 3: Click 'Follow Up!'</p>
           <p>After that, you leave the rest to me!</p>
         </form>

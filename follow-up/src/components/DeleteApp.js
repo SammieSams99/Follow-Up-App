@@ -12,7 +12,7 @@ class DeleteApp extends Component {
         axios.delete(`http://localhost:3001/api/v1/forms/${id}`)
         .then(res => {
             console.log(res.data)
-            alert("You've just deleted a job application!")
+            alert("You've just deleted a job application! Please refresh your screen.")
         })  .catch(error=>console.log(error))
     }    
     render() {

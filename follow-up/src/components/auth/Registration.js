@@ -59,7 +59,7 @@ class Registration extends Component {
       <div className= 'reg'>
         <form onSubmit={this.handleSubmit} className="regform">
         <h1 style={{textShadow: "2px 2px antiquewhite"}}>Create Your Account</h1>
-        <p style={{top: "12px"}}>Name: </p>
+        <p style={{top: "14px"}}>Name: </p>
         <input
             type="name"
             name="name"
@@ -68,7 +68,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-          <p style={{top: "12px"}}>Email: </p>
+          <p style={{top: "14px"}}>Email: </p>
           <input
             type="email"
             name="email"
@@ -77,7 +77,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-          <p style={{top: "12px"}}>Password: </p>
+          <p style={{top: "14px"}}>Password: </p>
           <input
             type="password"
             name="password"
@@ -86,7 +86,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-          <p style={{top: "12px"}}>Confirm Password: </p>
+          <p style={{top: "14px"}}>Confirm Password: </p>
           <input style={{left: "30px"}}
             type="password"
             name="password_confirmation"
