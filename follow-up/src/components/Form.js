@@ -5,7 +5,7 @@ class Form extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        username: '',
+        user: localStorage.getItem("id"),
         jobType: "full time",
         appliedThrough: "linkedin"
       };
@@ -32,21 +32,28 @@ class Form extends React.Component {
 
     onSubmit = (event) => {
       event.preventDefault()
-      console.log({...this.state}) 
-      axios.post("http://localhost:3001/api/v1/app", {
+      console.log({...this.state})
+      console.log("follow up")
+      alert("Reminder created! Click My Apps to view your scheduled reminders") 
+      axios.post("http://localhost:3001/api/v1/forms", {
         ...this.state
+      }, {
+        withCredentials: true
       })
       .then(function(res){
-        console.log(res)
+        console.log(res, "this is the res")
       })
       .catch(function(error){
         console.log(error)
       })
     }
     render() {
+      const name = localStorage.getItem("name")
       return (
         <> 
-        <form onSubmit = {this.onSubmit} className='userform'>
+        {name ? <h1>Welcome, {name}</h1> : "" }
+        <form onSubmit = {this.onSubmit} className="userform">
+        <h1 style={{textShadow: "2px 2px antiquewhite"}}>Application Info</h1>
         <p>Company Name:</p>
         <input
           type='text'
@@ -95,7 +102,7 @@ class Form extends React.Component {
           name= "followupdate"
           onChange={this.myChangeHandler}
         />
-        <input type="submit" value="Follow Up"/>
+        <input className="followupButton" type="submit" value="Follow Up"/>
         </form>
         </>
       );

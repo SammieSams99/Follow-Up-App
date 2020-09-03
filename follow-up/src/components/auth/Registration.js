@@ -25,19 +25,17 @@ class Registration extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    const { name,email, password, password_confirmation } = this.state;
+    const { name,email, password} = this.state;
     console.log("submit")
+    alert("Thank you! You are now a Follow Up member, please login.")
 
     axios
       .post(
         "http://localhost:3001/api/v1/auth/register",
         {
-          user: {
-            name: name,
-            email: email,
-            password: password,
-            password_confirmation: password_confirmation
-          }
+          name: name,
+          email: email,
+          password: password,
         },
         { withCredentials: true }
       )
@@ -58,9 +56,10 @@ class Registration extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-        <p>Please fill out the form below:</p>
+      <div className= 'reg'>
+        <form onSubmit={this.handleSubmit} className="regform">
+        <h1 style={{textShadow: "2px 2px antiquewhite"}}>Create Your Account</h1>
+        <p style={{top: "12px"}}>Name: </p>
         <input
             type="name"
             name="name"
@@ -69,7 +68,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-          <p>Email</p>
+          <p style={{top: "12px"}}>Email: </p>
           <input
             type="email"
             name="email"
@@ -78,7 +77,7 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-          <p>Password</p>
+          <p style={{top: "12px"}}>Password: </p>
           <input
             type="password"
             name="password"
@@ -87,8 +86,8 @@ class Registration extends Component {
             onChange={this.handleChange}
             required
           />
-          <p> Confirm Password</p>
-          <input
+          <p style={{top: "12px"}}>Confirm Password: </p>
+          <input style={{left: "30px"}}
             type="password"
             name="password_confirmation"
             placeholder="Password confirmation"
@@ -97,7 +96,7 @@ class Registration extends Component {
             required
           />
 
-          <button type="submit">Register</button>
+          <button style={{left: "35px"}} type="submit">Register</button>
         </form>
       </div>
     );
