@@ -72,7 +72,7 @@ p {
   padding: 8px 35px 30px;
   border-radius: 15px;
   position: relative;
-  top: -60px;
+  top: -90px;
   text-align: center;
   position: relative;
   box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
@@ -206,9 +206,6 @@ button:hover {
   border-radius: 15px;  
 }
 
-delete-button:hover {
-  color: white;
-}
 
 .delete-button {
   border-style: outset;
@@ -218,6 +215,9 @@ delete-button:hover {
   /* background-color: black; */
 }
 
+.delete-button:hover {
+  color: white;
+}
 
 .formDetails {
   color: rgb(16,70,106);
